@@ -2,20 +2,25 @@
 
 class Casino{
 
-	start() {
-		IO.display("Somethign");
-		IO.getStringInput("Please say yo name");
-		IO.getPositiveNumberInput("Money");
-		if(this.userInputEle.value.toLowerCase() == "bob" || this.userInputEle.value.toLowerCase() == "alice"){
-			this.displayEle.innerHTML += "Greetings, " + this.userInputEle.value + "!" ;
-		}else{
-			this.displayEle.innerHTML +=  this.userInputEle.value + "? " + "Stranger Danger!!!";
-		}
-		this.displayEle.innerHTML += "<br/><br/>";
-		this.askForName();
+	casinoWelcome() {
+		IO.display("Welcome to Uncle Bob's Backyard Casinooooooooo!");
 	}
 
 	askForName(){
-		this.displayEle.innerHTML += "What is your name?"
+       let name: string = IO.getStringInput("What is your name semi-attractive person?");
+       IO.display(name);
 	}
+
+	askForMoney(){
+        let money: number = IO.getPositiveNumberInput("How much you puttin' up?");
+        IO.display(""+money);
+	}
+	casinoStart(){
+	    this.casinoWelcome();
+	    //this.askForName();
+        // this.askForMoney();
+	}
+
+   // IO.getStringInput("Please say yo name");
+
 }
