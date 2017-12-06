@@ -15,6 +15,7 @@ class Casino{
         let money: number = IO.getPositiveNumberInput("How much you puttin' up?");
         IO.display(""+money);
 	}
+
 	casinoStart(){
 	    this.casinoWelcome();
 	    //this.askForName();
