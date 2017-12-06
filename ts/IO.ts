@@ -7,8 +7,12 @@ class IO {
         this.displayEle.innerHTML += "<br/>"+displayString;
     }
 
+    public static clear():void {
+        this.displayEle.innerHTML = "";
+    }
+
     public static getStringInput(prompt: string): string{
-        this.displayEle.innerHTML += "<br/>"+prompt;
+        this.display(prompt);
         return this.userInputEle.value;
     }
 
