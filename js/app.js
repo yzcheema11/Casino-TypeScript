@@ -1,12 +1,12 @@
-var AliceBob = (function () {
-    function AliceBob() {
+var Casino = /** @class */ (function () {
+    function Casino() {
         this.displayEle = document.getElementById("display");
         this.userInputEle = document.getElementById("user_input");
     }
-    AliceBob.prototype.init = function () {
+    Casino.prototype.init = function () {
         this.askForName();
     };
-    AliceBob.prototype.submitName = function () {
+    Casino.prototype.start = function () {
         this.displayEle.innerHTML += "<br/>";
         if (this.userInputEle.value.toLowerCase() == "bob" || this.userInputEle.value.toLowerCase() == "alice") {
             this.displayEle.innerHTML += "Greetings, " + this.userInputEle.value + "!";
@@ -17,12 +17,11 @@ var AliceBob = (function () {
         this.displayEle.innerHTML += "<br/><br/>";
         this.askForName();
     };
-    AliceBob.prototype.askForName = function () {
+    Casino.prototype.askForName = function () {
         this.displayEle.innerHTML += "What is your name?";
     };
-    return AliceBob;
+    return Casino;
 }());
-/// <reference path="AliceBob.ts" />
-var aliceBob = new AliceBob();
-aliceBob.init();
+/// <reference path="Casino.ts" />
+var casino = new Casino();
 //# sourceMappingURL=app.js.map

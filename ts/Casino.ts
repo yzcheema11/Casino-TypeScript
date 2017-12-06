@@ -1,18 +1,8 @@
-class AliceBob{
+///<reference path="IO.ts"/>
 
-	displayEle:any;
-	userInputEle:any;
+class Casino{
 
-	constructor(){
-		this.displayEle = document.getElementById("display");
-		this.userInputEle = document.getElementById("user_input")
-	}
-
-	init(){
-		this.askForName();
-	}
-
-	submitName() {
+	start() {
 		this.displayEle.innerHTML += "<br/>";
 		if(this.userInputEle.value.toLowerCase() == "bob" || this.userInputEle.value.toLowerCase() == "alice"){
 			this.displayEle.innerHTML += "Greetings, " + this.userInputEle.value + "!" ;
